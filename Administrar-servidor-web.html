@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tema IV</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">ADMINISTRACIÓN DE SERVIDORES</div>
+
+  <nav>
+    <a href="inicio.html">Inicio</a>
+    <a href="#">Tema</a>
+  </nav>
+</header>
+
+<section class="hero" style="min-height:60vh;">
+
+  <div class="hero-text">
+
+    <p class="tag">Tema IV</p>
+
+    <h1>
+      ADMINISTRAR<br>
+      SERVIDOR WEB
+    </h1>
+
+    <p class="description">
+ La administración de un servidor web es el conjunto de tareas para mantener el software operativo, seguro y rápido .Se resume en tres acciones clave:<br><br>
+		<b>Configuración:</b> Instalar el programa (Nginx, Apache) y enlazar los dominios de las páginas web.<br>
+		<b>Seguridad:</b> Implementar certificados SSL (HTTPS), actualizar el sistema y programar respaldos.<br>
+		<b>Monitoreo:</b> Supervisar el consumo de recursos (RAM/CPU) para evitar caídas del servicio.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="glass-card">
+
+    <h2 style="margin-bottom:25px;">4.1 cPANEL DE SERVIDOR WEB</h2><br>
+
+     <p class="description">
+		cPanel es un panel de control gráfico basado en web que simplifica drásticamente la administración de servidores Linux y cuentas de hosting. Permite automatizar tareas complejas sin necesidad de dominar la consola de comandos. A través de su interfaz intuitiva dividida en bloques se pueden gestionar correos electrónicos corporativos, copias de seguridad automáticas, zonas DNS, bases de datos y la instalación de aplicaciones web (como WordPress) con un solo clic.
+<br><br>
+
+		<img src="4.1.png" style="width:950px; height: 700px; text-align: center; margin-left: 100px;" alt="Prensa 1">
+  
+	  <br><br>
+	  
+	  
+	  
+			<p class="description">
+				 <h2 style="margin-bottom:25px;">4.2 ADMINISTRADOR DE ARCHIVOS</h2>
+	  <p class="description">
+	  <br>
+Herramienta web integrada dentro de cPanel que funciona como el explorador de archivos del servidor.<br><br>
+	<b>Directorio Raíz Público:</b> Toda la información que debe ser visible en internet tiene que alojarse obligatoriamente dentro del directorio llamado public_html (o www). Los archivos fuera de esta carpeta quedan ocultos al público por seguridad.<br>
+	<b>Funciones integradas:</b> Permite crear, renombrar, mover, borrar y editar archivos directamente en el navegador de forma visual. También incluye herramientas para comprimir y descomprimir archivos planos (como archivos .zip), agilizando la subida masiva de código fuente.
+			  
+<br><br>
+	  	<img src="4.2.png" style="width:950px; height: 700px; text-align: center; margin-left: 100px;" alt="Prensa 1">
+  
+	  <br><br>
+	  
+	  
+<p class="description">
+				 <h2 style="margin-bottom:25px;">4.3 PROTOCOLO DE TRANSFERENCIA DE ARCHIVOS (FTP)</h2>
+	  <p class="description">
+	  
+		  
+Protocolo de red estándar (puerto 21) utilizado para transferir archivos entre un cliente local y el servidor remoto.<br><br>
+		  <b>Estructura:</b> Requiere un Servidor FTP corriendo en el hosting y un Cliente FTP local en la computadora del desarrollador (el software más popular y de código abierto es FileZilla).<br>
+		  <b>Variantes de Seguridad:</b> El protocolo FTP plano transmite las contraseñas y datos en texto sin formato, exponiéndolos a intercepciones. Por ello, se deben implementar sus variantes cifradas: <br>
+		  <b>FTPS (FTP sobre SSL/TLS) o SFTP (SSH File Transfer Protocol, que viaja de forma segura cifrado a través del puerto 22 de SSH).</b>
+		  
+	  <br><br>
+	  	<img src="4.3.png" style="width:950px; height: 800px; text-align: center; margin-left: 100px;" alt="Prensa 1">
+  
+	 
+
+
+<section>
+ <div class="navigation-buttons">
+
+    <a href="Servidores-Web.html" class="nav-button back">
+        ← Volver al Tema III
+    </a>
+
+    <a href="Dominios-web.html" class="nav-button next">
+        Ir a Siguiente Tema →
+    </a>
+
+</div>
+</section>
+
+</body>
+</html>
