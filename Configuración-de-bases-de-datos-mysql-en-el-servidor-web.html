@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tema VI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">ADMINISTRACIÓN DE SERVIDORES</div>
+
+  <nav>
+    <a href="inicio.html">Inicio</a>
+    <a href="#">Tema</a>
+  </nav>
+</header>
+
+<section class="hero" style="min-height:60vh;">
+
+  <div class="hero-text">
+
+    <p class="tag">Tema VI</p>
+
+    <h1>
+      CONFIGURACIÓN DE BASES DE DATOS<br>
+      MYSQL EN EL SERVIDOR WEB
+    </h1>
+
+    <p class="description">
+  Para desplegar un sistema web dinámico en producción desde cPanel, se debe configurar una base de datos relacional MySQL siguiendo un estricto orden secuencial:
+		<br><br>
+		<b>Creación de la Base de Datos:</b> Acceder al módulo Bases de datos MySQL en cPanel y asignarle un nombre único al contenedor de datos.<br><br>
+		<b>Creación del Usuario de la Base de Datos:</b> En la misma sección, generar un usuario específico para esa base de datos y definir una contraseña de alta seguridad.<br><br>
+		<b>Asociación y Privilegios:</b> Vincular el usuario creado con la base de datos correspondiente, otorgándole explícitamente los privilegios de ejecución requeridos (SELECT, INSERT, UPDATE, DELETE, CREATE, DROP).<br><br>
+		<b>Administración Gráfica:</b> Utilizar la herramienta integrada phpMyAdmin para crear tablas, importar esquemas .sql externos o gestionar registros de forma visual.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="glass-card">
+
+  <h2 style="margin-bottom:25px;">6.1 CONEXIÓN DE BASES DE DATOS EN LA WEB</h2><br>
+
+     <p class="description">
+ 
+
+Las aplicaciones dinámicas (programadas en lenguajes del lado del servidor como PHP) requieren un script de inicialización para conectarse al motor de MySQL empleando cuatro parámetros de configuración obligatorios:<br><br>
+	
+	<b>Host (Servidor):</b> Generalmente se define como localhost si el script web y la base de datos residen físicamente en el mismo servidor. Si la base de datos se encuentra en un servidor externo, se ingresa su IP o dominio correspondiente.<br><br>
+	<b>Nombre de la Base de Datos:</b> El identificador exacto de la base de datos configurada en el panel.<br><br>
+	<b>Usuario:</b> El nombre del usuario con privilegios asociado previamente.<br><br>
+	<b>Contraseña:</b> La clave secreta del usuario de la base de datos.<br><br>
+	
+	<b>Ejemplo técnico de conexión en PHP moderno (Usando PDO - PHP Data Objects):</b>
+<br><br>
+
+		<img src="6.1.png" style="width:1100px; height: 800px; text-align: center; margin-left: 50px;" alt="Prensa 1">
+  
+	  <br><br>
+	  
+	  
+	  
+			
+<section>
+ <div class="navigation-buttons">
+
+    <a href="Dominios-web.html" class="nav-button back">
+        ← Volver al Tema V
+    </a>
+
+    <a href="inicio.html" class="nav-button next">
+        Ir al Inicio →
+    </a>
+
+</div>
+</section>
+
+</body>
+</html>
