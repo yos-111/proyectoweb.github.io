@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tema II</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">ADMINISTRACIÓN DE SERVIDORES</div>
+
+  <nav>
+    <a href="inicio.html">Inicio</a>
+    <a href="#">Tema</a>
+  </nav>
+</header>
+
+<section class="hero" style="min-height:60vh;">
+
+  <div class="hero-text">
+
+    <p class="tag">Tema II</p>
+
+    <h1>
+      CLASIFICACIÓN DE LOS<br>
+     SERVIDORES
+    </h1>
+<br><br>
+    <p class="description">
+  Los servidores se clasifican según el rol lógico que desempeñan en una red bajo el modelo cliente-servidor:<br><br>
+		
+		<b>Servidor de Archivos:</b> Almacena y gestiona repositorios de datos compartidos en red local mediante protocolos como SMB/CIFS (Windows) o NFS (Linux).<br>
+		
+		<b>Servidor de Base de Datos:</b> Ejecuta motores de bases de datos (MySQL, PostgreSQL, Oracle) para procesar consultas estructuradas (SQL) de manera optimizada y concurrente.<br>
+		
+		<b>Servidor de Correo (Mail Server):</b> Gestiona el envío, recepción y almacenamiento de e-mails usando protocolos como SMTP (envío), IMAP y POP3 (recepción).<br>
+		
+		<b>Servidor DNS (Domain Name System):</b> Traduce nombres de dominio legibles (ej. google.com) en direcciones IP numéricas.<br>
+		
+		<b>Servidor DHCP (Dynamic Host Configuration Protocol):</b> Asigna de forma dinámica y automática direcciones IP y configuraciones de red a los dispositivos de una infraestructura.<br>
+		
+		<b>Servidor Web:</b> Despacha contenido de hipertexto (HTML, CSS, JS) a los navegadores mediante solicitudes HTTP/HTTPS.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="glass-card">
+
+    <h2 style="margin-bottom:25px;">2.1 CARACTERÍSTICAS PRINCIPALES</h2><br>
+
+    <p class="description">
+		<b>¿CUÁLES SON?</b> <br><br>
+ 
+
+<b>Disponibilidad (Alta disponibilidad - HA):</b> Diseñados para operar de forma ininterrumpida (24/7/365). Se mide en porcentaje de actividad (ej. "cinco nueves" o 99.999% de tiempo en línea).<br>
+		
+		<b>Escalabilidad:</b> Capacidad de absorber mayor carga de trabajo. Puede ser Vertical (Scale-up), añadiendo más hardware a la máquina actual (más RAM, mejor CPU); o Horizontal (Scale-out), sumando nodos o servidores a la red para trabajar en conjunto.<br>
+		
+		<b>Redundancia:</b> Duplicación de componentes críticos para evitar puntos únicos de fallo. Incluye fuentes de alimentación dobles, múltiples tarjetas de red (NIC Teaming) y almacenamiento protegido contra fallos de discos.<br>
+		
+		<b>Rendimiento:</b> Optimización del procesado físico. Se logra mediante arquitecturas multihilo, memorias con corrección de errores (ECC RAM) y almacenamiento de estado sólido de alta velocidad (NVMe).
+<br><br>
+
+		<img src="2.1.png" style="width:950px; height: 500px; text-align: center; margin-left: 100px;" alt="Prensa 1">
+  
+	  <br><br>
+	  
+	  
+	  
+			<p class="description">
+				 <h2 style="margin-bottom:25px;">2.2 INFORMACIÓN PRINCIPAL DEL EQUIPO DE CÓMPUTO (SOFTWARE Y HARDWARE)</h2>
+	  <p class="description">
+	  <br>
+<b>Hardware Crítico:</b><br><br>
+		 <b> Procesadores (CPU):</b> Arquitecturas multi-núcleo optimizadas para paralelismo (ej. Intel Xeon, AMD EPYC) con grandes cantidades de memoria caché L3.<br>
+		  <b>Memoria RAM ECC:</b> Memoria con código de corrección de errores. Detecta y repara la corrupción de datos en tiempo real antes de que provoquen un reinicio del sistema.<br>
+		  <b>Almacenamiento RAID:</b> Redundancia de discos independientes. <br>
+		  <b>Configuraciones comunes:</b> RAID 1 (Espejo, seguridad total), RAID 5 (Distribución con paridad, balance peso/velocidad) o RAID 10 (Velocidad y espejo combinados).<br><br>
+		  
+<b>Software Esencial:</b><br><br>
+		 <b> Sistemas Operativos de Servidor:</b> Distribuciones sin interfaz gráfica (Headless) optimizadas para ahorrar recursos, como Ubuntu Server, Red Hat Enterprise Linux (RHEL), Rocky Linux o Windows Server.<br>
+		  <b>Monitores de Recursos:</b> Software para medir logs, rendimiento y salud de la máquina (ej. Prometheus, Grafana, htop).
+			  
+<br><br>
+	  	<img src="2.2.png" style="width:950px; height: 500px; text-align: center; margin-left: 100px;" alt="Prensa 1">
+  
+	  <br><br>
+	  
+	  
+<p class="description">
+				 <h2 style="margin-bottom:25px;">2.3 PREPARACIÓN DE LA MÁQUINA VIRTUAL PARA LA INSTALACIÓN DE LINUX Y WINDOWS</h2>
+	  <p class="description">
+	  
+		  
+El hipervisor (Type 2 como VirtualBox o VMware Workstation; o Type 1 como Proxmox o ESXi) requiere configuraciones específicas previas:
+		  <br><br>
+		 <b> Asignación de Recursos:</b><br><br>
+		  <b>Linux (Server):</b> Mínimo 1-2 vCPUs, 1-2 GB de RAM, 20 GB de disco.<br>
+		  <b>Windows (Server/Pro):</b> Mínimo 2 vCPUs, 4 GB de RAM (8 GB recomendado), 60 GB de disco.<br>
+		  <b>Habilitación de Virtualización Física:</b> Activar VT-x (Intel) o AMD-V en la BIOS/UEFI de la máquina real.
+		  <br><br>
+		  <b>Configuración de Red:</b><br><br>
+		  <b>NAT:</b> Permite salir a internet a la máquina virtual usando la IP de la máquina real (aislada del exterior).<br>
+		  <b>Adaptador Puente (Bridge):</b> La máquina virtual toma una IP propia directamente del módem/router local, comportándose como un equipo físico real más en la red.<br>
+		 <b> Montaje de Medios:</b> Cargar el archivo de imagen de instalación (.iso) en la unidad óptica virtual de la máquina.
+	  <br><br>
+	  	<img src="2.3.png" style="width:950px; height: 500px; text-align: center; margin-left: 100px;" alt="Prensa 1">
+  
+	  <br><br>
+		  
+		  
+		  
+	  
+<p class="description">
+				 <h2 style="margin-bottom:25px;">2.4 INSTALACIÓN DE LINUX Y WINDOWS</h2>
+	  <p class="description">
+	  <br>
+<b>Proceso en Linux (Ej. Ubuntu Server):</b><br><br>
+	1.- Bootear desde la ISO. Seleccionar idioma y distribución de teclado.<br>
+	2.- Configurar la red (IP estática recomendada para servidores o DHCP).<br>
+	3.- Particionado de disco: Elegir guiado o manual con LVM (Logical Volume Manager) para redimensionar discos en el futuro de forma dinámica.<br>
+	4.- Crear cuenta de usuario administrador y habilitar la instalación del servidor OpenSSH (esencial para administración remota).<br>
+	5.- Finalizar la descarga de paquetes e instalar el cargador de arranque GRUB en el Master Boot Record (MBR) o partición EFI.<br><br>
+	
+	<b>Proceso en Windows (Ej. Windows Server / Windows 10/11):</b><br><br>
+	1.- Iniciar el instalador. <br>
+	2.- Seleccionar idioma, región y formato de hora.<br>
+	3.- Introducción de clave de producto o selección de edición (Elegir Experiencia de escritorio si se requiere interfaz gráfica, o Core para instalación limpia por comandos).<br>
+	4.- Aceptar términos de licencia y elegir instalación Personalizada (Avanzada).<br>
+	5.- Particionar el disco (el sistema formateará por defecto en sistema de archivos NTFS y creará particiones reservadas).Copia de archivos, reinicios sucesivos y asignación obligatoria de contraseña para la cuenta integrada de Administrador.
+	  <br><br>
+	  
+	 	<img src="2.4.png" style="width:950px; height: 500px; text-align: center; margin-left: 100px;" alt="Prensa 1">
+		  
+<p class="description">
+				 <h2 style="margin-bottom:25px;">2.5 PRIMEROS PASOS EN EL MANEJO DE LINUX Y DE WINDOWS</h2>
+	  <p class="description">
+	  <br>
+<b>Manejo en Linux:</b> <br><br>
+	Se interactúa mediante la interfaz de línea de comandos (CLI). No existe el concepto de "Letras de disco" (C:, D:); todo cuelga de la raíz del sistema representada por una barra inclinada (/). La administración se realiza elevando privilegios con el comando sudo.
+	<br><br>
+	<b>Manejo en Windows:</b><br><br>
+	Interfaz gráfica tradicional basada en ventanas, menús contextuales y el Panel de Control / Configuración. La administración se centraliza en el Administrador del Servidor (en versiones Server) o mediante consolas avanzadas como PowerShell y el Administrador de Equipos (compmgmt.msc).
+	
+	<br><br>
+	<img src="2.5.png" style="width:950px; height: 500px; text-align: center; margin-left: 100px;" alt="Prensa 1">
+	
+	
+
+	 
+	 <p class="description">
+				 <h2 style="margin-bottom:25px;">2.6 COMANDOS BÁSICOS DE CONSOLA</h2>
+	  <p class="description">
+	  <br>
+<img src="2.6.png" style="width:1100px; height: 700px; text-align: center; margin-left: 40px;" alt="Prensa 1">
+		  
+		  
+		  
+		  
+		  
+		  
+
+<section>
+ <div class="navigation-buttons">
+
+    <a href="Clasificación-de-los-sistemas-operativos.html" class="nav-button back">
+        ← Volver al Tema I
+    </a>
+
+    <a href="Servidores-Web.html" class="nav-button next">
+        Ir a Siguiente Tema →
+    </a>
+
+</div>
+</section>
+
+</body>
+</html>
