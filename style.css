@@ -363,7 +363,20 @@ audio {
     rgba(255,255,255,.05));
 }
 
+/* RESPONSIVE */
 
+@media(max-width:700px){
+
+    .navigation-buttons{
+
+        flex-direction:column;
+    }
+
+    .nav-button{
+
+        width:100%;
+    }
+}
 
 /* BOTÓN */
 
@@ -409,98 +422,25 @@ audio {
     0 15px 35px rgba(142,197,255,.45);
 }
 
+/* RESPONSIVE */
+
 @media(max-width:700px){
 
-    /* NAVBAR */
-
-    .navbar{
-        flex-direction:column;
-        padding:20px;
-        gap:15px;
-    }
-
-    nav{
-        display:flex;
-        flex-direction:column;
-        gap:15px;
-        align-items:center;
-    }
-
-    /* HERO */
-
-    .hero{
-        grid-template-columns:1fr;
-        padding:140px 20px 50px;
-        text-align:center;
-        gap:30px;
-    }
-
-    .hero h1{
-        font-size:2.5rem;
-        line-height:1.1;
-    }
-
-    .description{
-        text-align:center;
-    }
-
-    /* TITULOS */
-
-    .section-title h2{
-        font-size:2rem;
-    }
-
-    /* SECCIONES */
-
-    section{
-        padding:70px 20px;
-    }
-
-    /* TARJETAS */
-
-    .cards-grid{
-        grid-template-columns:1fr;
-    }
-
-    .team-grid{
-        grid-template-columns:1fr;
-    }
-
-    .topic-card{
-        min-height:auto;
-    }
-
-    /* IMAGENES */
-
-    img{
-        max-width:100%;
-        height:auto;
-    }
-
-    .member-image{
-        width:100px;
-        height:100px;
-    }
-
-    /* BOTONES */
-
-    .navigation-buttons{
-        flex-direction:column;
-    }
-
-    .nav-btn,
-    .nav-button{
-        width:100%;
-        min-width:unset;
-    }
-
     .visitor-card{
+
         padding:35px 25px;
     }
 
     .visitor-card h1{
+
         font-size:2rem;
     }
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 :root{
